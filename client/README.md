@@ -1,3 +1,19 @@
+# Memories App - MERN Project
+
+This project is a MERN Project, which means it's implemented using MongoDB, Express, React and Node.
+It's made to upload memories, which contain a picture of it, the creator, a description and some tags.
+
+To make the project work you will need to clone the repository and change the .env file with the right information. This information normally it's just not committed using gitignore, but since it's just for learning I decided to keep it.
+
+It contains the frontend (client folder) and the backend (server folder).
+
+There is a deployed version of this project on netlify:
+  - https://memories-app-guerraxy.netlify.app/
+ 
+While the server was deployed on Heroku.
+
+The repository also contains some pictures that explain the flow of the application, for learning purposes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

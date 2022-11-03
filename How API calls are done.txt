@@ -1,0 +1,4 @@
+useEffect -> React hook to fetch posts as soon as the app renders/mounts
+useState -> React hook that helps to creat a local storage for our data
+
+'App.js'(localhost:3000/posts)->'action'->'api'->'server'(localhost:5000/posts)->'routes'->'controllers'

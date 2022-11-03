@@ -1,0 +1,2 @@
+In redux we have a store where we can store data (variables), to be accessible by all of the components in the application.
+That way we don't need to pass a variable from a Component to it's child, using arguments, example image on this directory.

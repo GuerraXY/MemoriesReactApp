@@ -6,10 +6,13 @@ import Post from './Post/Post';
 import useStyles from './styles';
 
 const Posts = ({ setCurrentId }) => {
+
+  //go to the redux store and get the posts
   const posts = useSelector((state) => state.posts);
   const classes = useStyles();
 
   return (
+    //if there are no posts we will provide a loading gif
     !posts.length ? <CircularProgress /> : (
       <Grid className={classes.container} container alignItems="stretch" spacing={3}>
         {posts.map((post) => (

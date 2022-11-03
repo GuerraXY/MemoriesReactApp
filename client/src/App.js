@@ -9,11 +9,15 @@ import useStyles from './styles';
 import memories from './images/memories.png';
 
 const App = () => {
+
+  //Define App state
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
   const classes = useStyles();
 
+  //Everytime the page render, this code will be executed
   useEffect(() => {
+    //dispatch used to call an action, that will do what they need with the server
     dispatch(getPosts());
   }, [currentId, dispatch]);
 

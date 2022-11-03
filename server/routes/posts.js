@@ -4,6 +4,7 @@ import { getPosts, getPost, createPost, updatePost, likePost, deletePost } from 
 
 const router = express.Router();
 
+//Express router will listen in these urls and perform actions when its called
 router.get('/', getPosts);
 router.post('/', createPost);
 router.get('/:id', getPost);

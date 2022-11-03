@@ -7,11 +7,16 @@ import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
 
 const Form = ({ currentId, setCurrentId }) => {
+
+  //Define state of the Form, it will contain every information necessary to create a post
   const [postData, setPostData] = useState({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+
+  //useSelector() used to extract data from the redux store, this will get the post that has the post with the id we are looking for
   const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
 
+  //useEffect called everytime the post is differente, that's why it has the 2nd argument as [post]
   useEffect(() => {
     if (post) setPostData(post);
   }, [post]);
@@ -22,9 +27,11 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     if (currentId === 0) {
+      //dispatch used to call an action, that will do what they need with the server
       dispatch(createPost(postData));
       clear();
     } else {

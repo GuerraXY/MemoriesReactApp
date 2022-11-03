@@ -4,6 +4,8 @@ import * as api from '../api/index.js';
 
 export const getPosts = () => async (dispatch) => {
   try {
+
+    //will make a call to the server to get all the posts
     const { data } = await api.fetchPosts();
 
     dispatch({ type: FETCH_ALL, payload: data });
